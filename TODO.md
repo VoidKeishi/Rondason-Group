@@ -2,10 +2,10 @@
 
 ## Client follow-ups
 
-- [] **Which logo mark is official — circle globe-meridian or diamond-R?** The website design uses the circle, all stationery uses the diamond-R. Now load-bearing: the header, footer, favicon and OG image all need one answer. Also request a vector (SVG/AI) file — none exists; both marks are CSS-only in the reference.
+- [] **Which logo mark is official — circle globe-meridian or diamond-R?** The website design uses the circle, all stationery uses the diamond-R. Now load-bearing: the header, footer, favicon and OG image all need one answer. Circle-mark + lockup vectors are now extracted from `Rondason_Logo.pptx` into `public/logos/`; the diamond-R still has no vector. Also confirm the mark geometry: the pptx artwork (two straight meridian lines — now used on the site) differs from the dc.html web export (ellipse meridian), and gold-on-light differs (`#C6952C` pptx vs `#DDB049` dc.html).
 - [] **Exact legal entity name?** Website footer says "Rondason Group Pte. Ltd."; letterhead says "Rondason Pte. Ltd." — the footer legal line must match the ACRA registration.
 - [] **Official tagline?** Brand note demands one tagline "consistently across every touchpoint", but material alternates between `GLOBAL COMMODITY MARKETS` (eyebrow/stationery) and "Connecting Global Commodity Markets" (deck/marketing-pack cover).
-- [] **Image licensing.** All current images are unlicensed comps — the Markets collage carries a visible Dreamstime watermark; hero + alternates are Freepik previews. Client to buy licenses or approve replacements (budget for stock or commissioned photography?).
+- [] **Image licensing — LAUNCH BLOCKER.** The site now ships the three client comps (`public/images/`) per the client-asset request, and all are unlicensed — the Markets collage carries a Dreamstime watermark; hero + alternates are Freepik previews. Client must buy licenses or approve replacements before launch (budget for stock or commissioned photography?).
 - [] **Contact mechanism.** The design has no form — "Get in Touch" anchors to the footer's mailto link. Is mailto-only acceptable, or add a contact form (then: where do submissions go — Formspree/Resend to info@rondason.com)?
 - [] **Phone attribution.** Only one real number exists (`+65 9040 4928`, utility bar); business cards show placeholder `+65 0000 0000`. Confirm the number is correct for public display and whose it is.
 - [] **Domain & hosting.** Brand note says "secure rondason.com early" — is it registered? DNS access for Vercel? Who owns the registrar account?
@@ -14,15 +14,26 @@
 
 ## Design & build
 
-- [] Client sign-off on the **elevation redesign** (drawn meridian globe replaces all stock photography; 4-step process, pull quote and credential line surfaced from their marketing pack). If they insist on photography instead, imagery must be licensed — the old comps were unlicensed (Dreamstime watermark / Freepik).
-- [] OG share image (1200×630) from the ruled logo mark; current favicon (`src/app/icon.svg`) is a placeholder (gold circle mark on navy) pending the client's logo ruling.
-- [] Draw the diamond-R mark as SVG if the client rules for it (circle mark is done — `src/components/ui/LogoMark.tsx`).
+- [] Client sign-off on the **elevation redesign** (drawn meridian globe hero signature; 4-step process, pull quote and credential line surfaced from their marketing pack; their imagery re-integrated as dimmed texture).
+- [] OG share image (1200×630) from the extracted mark/lockup (`public/logos/`); favicon (`src/app/icon.svg`) now uses the extracted mark but stays provisional pending the circle-vs-diamond ruling.
+- [] Draw/extract the diamond-R mark as SVG if the client rules for it (circle mark + lockups are extracted — `public/logos/`, `src/components/ui/LogoMark.tsx`).
 - [] Set the real production domain in `layout.tsx` `metadataBase` once rondason.com is confirmed; deploy to Vercel.
 - [] CMS_PLAN.md deferred — write after the page exists, if the client wants content self-service (Riviera convention).
 
 ---
 
 # DONE
+
+## Client assets + logo extraction session (2026-08-12)
+
+- [x] Re-integrated the client's three comps as dimmed texture layers (user request): hero photo 50% under a 100° navy `.hero-overlay` gradient with the globe drawing on top; Story texture at the client's 8%; Markets collage 30% under a `.markets-overlay` veil (replacing the 10% globe echo — globe signature is hero-only now). Licensing re-flagged as a launch blocker.
+- [x] **Extracted the logo vectors verbatim from `Reference/Rondason_Logo.pptx`** (no image files inside — the logos are DrawingML shapes): LibreOffice headless → PDF → `pdftocairo -svg`, then card backgrounds dropped and viewBox cropped, path data untouched. Produced `public/logos/rondason-{mark,lockup}-on-{light,dark}.svg`; `LogoMark.tsx` + `icon.svg` now use the extracted slide-4 small cut (colors → currentColor).
+- [x] Verified via headless screenshots (logo proof sheet on light/dark + hero/story/markets/footer); build + lint clean.
+- Notes / gotchas:
+  - The pptx wordmark fonts must be installed before rendering or LibreOffice substitutes: Source Serif 4 variable TTF works, but **variable Public Sans exports as Type3 bitmaps** — use the static USWDS release TTFs (fontconfig via `FONTCONFIG_FILE` pointing at a scratch fonts dir, no system install).
+  - pdftocairo emits stroked paths with a `matrix(1,0,0,-1,0,810)` flip transform — account for it when computing crop boxes.
+  - pptx raw shape offsets don't match the render (group transforms); trust the rendered PDF/SVG, not hand-decoded EMU.
+  - Mark geometry discrepancy discovered: pptx = two straight meridian lines; dc.html web export = ellipse meridian. pptx adopted (brand identity source); flagged for client confirmation.
 
 ## Elevation redesign session (2026-08-12)
 

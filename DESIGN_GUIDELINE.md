@@ -10,14 +10,15 @@ Everything below is measured from the client's own designs: `Reference/Website/R
 
 The implemented site is a **redesign that elevates v2**, not a copy. Brand tokens, faces, and copy are unchanged; what changed:
 
-- **Signature: drawn cartography replaces stock photography.** A line-drawn orthographic meridian globe (`src/components/ui/MeridianGlobe.tsx` — circle + meridian ellipses + straight parallels echoing the logo's equator bar + trade-route arcs + pulsing port points, gold on navy) is the hero visual, drawing itself on page load. It echoes at 10% opacity cresting from below in Markets. **No photographs remain on the site** — the unlicensed-imagery problem is designed out, not deferred.
+- **Signature: drawn cartography.** A line-drawn orthographic meridian globe (`src/components/ui/MeridianGlobe.tsx` — circle + meridian ellipses + straight parallels echoing the logo's equator bar + trade-route arcs + pulsing port points, gold on navy) is the hero visual, drawing itself on page load over the veiled hero photograph.
+- **Client imagery re-integrated as texture (2026-08-12, user request).** The three client comps ship from `public/images/`: hero photo at 50% opacity under the `.hero-overlay` navy gradient (globe draws on top), Story texture at the client's 8% treatment, Markets collage at 30% under the `.markets-overlay` veil (it replaces the earlier 10% globe echo there — the globe signature is hero-only). **Images are still unlicensed comps — licensing is a launch blocker again (TODO).**
 - **One continuous navy field on top**: utility bar (`--color-navy-deep`) → header (navy, gold-outline CTA) → hero flow together; the page bookends in deep navy at the contact footer.
 - **Display type scale**: hero h1 `clamp(40px, 6vw, 72px)`, section h2 `clamp(30px, 4vw, 44px)` — same faces, same weight 500, bigger stage. Section vertical padding 120px.
 - **Process is now the 4-step sequence** (01 Sourcing → 04 Finance, marketing-pack copy, pending approval) set as stations on a hairline with gold diamond ticks — the numbering encodes a real order.
 - **Pull quote revived** in the marketing pack's italic-gold-serif cover treatment, on white above the pillars; trade-finance credential line closes Markets. (Both harvested copy — client approval tracked in TODO.)
 - **Contact as destination**: `#contact` is a deep-navy footer with `info@rondason.com` set in serif at `clamp(28px, 5vw, 60px)` gold-on-hover — the strongest contact treatment possible with approved copy only.
 - **Motion**: one orchestrated hero moment (globe draws ~1.6s, text rises staggered) + quiet ScrollReveals; all gated on `prefers-reduced-motion`.
-- New token: `--color-navy-deep` `oklch(0.16 0.045 262)` (utility bar, footer). The v2-era hero-overlay gradient and image-texture treatments are retired.
+- New token: `--color-navy-deep` `oklch(0.16 0.045 262)` (utility bar, footer).
 
 ---
 
@@ -95,20 +96,35 @@ Contrast notes: deep gold on white ≈ 4.9:1 (AA for the 13px bold-tracked eyebr
 
 ## Logo
 
-Two marks exist in the client material, **no vector file for either** — both are built from CSS divs. An SVG must be drawn from the CSS geometry (TODO), and the client asked to rule on which mark wins (TODO).
+Two marks exist in the client material; the client still has to rule on which one wins (TODO).
 
-1. **Circle mark** (globe/meridian) — **used on the website and brand sheet**: circle outline (2–2.5px stroke) containing a vertical ellipse (meridian) and a full-width horizontal bar (equator). Navy on light, gold-bright on navy. Header 30px, footer 26px, brand-sheet hero 76px.
-2. **Diamond-R mark** — used on ALL stationery, deck template, marketing pack: 45°-rotated square outline with counter-rotated Source Serif 4 "R". Gold-bright outline + white R on navy; navy outline + navy R on light.
+1. **Circle mark** (globe/meridian) — **used on the website and brand sheet**: circle outline containing **two straight vertical meridian lines** and a horizontal equator bar. Navy `#08152C` on light; gold `#DDB049` on dark. Header 30px, footer 26px, brand-sheet hero 76px.
+2. **Diamond-R mark** — used on ALL stationery, deck template, marketing pack: 45°-rotated square outline with counter-rotated Source Serif 4 "R". Gold-bright outline + white R on navy; navy outline + navy R on light. Still CSS-only, no vector.
 
 Working rule until the client decides: **website = circle mark** (matches v2), print = diamond-R.
 
-Lockup: `RONDASON` in Source Serif 4 letter-spaced caps; website pairs it as `RONDASON GROUP` on one line; the brand sheet stacks `RONDASON` over gold `GROUP` (4px tracking).
+### Extracted vector assets (2026-08-12)
+
+The circle mark and lockup are **extracted verbatim from `Reference/Rondason_Logo.pptx`** (the pptx contains no image files — the logos are DrawingML shapes; extraction = LibreOffice headless → PDF → `pdftocairo -svg`, with Source Serif 4 + static Public Sans installed so the wordmark outlines are the real fonts, then card backgrounds dropped and the viewBox cropped — path data untouched):
+
+- `public/logos/rondason-mark-on-light.svg` — navy `#08152C` (slide 2 large cut, 96pt, 3pt stroke)
+- `public/logos/rondason-mark-on-dark.svg` — gold `#DDB049`
+- `public/logos/rondason-lockup-on-light.svg` — mark + `RONDASON` (Source Serif outlines, navy) over `GROUP` (Public Sans tracked caps, gold `#C6952C`)
+- `public/logos/rondason-lockup-on-dark.svg` — same, cream `#F8F5EE` / gold `#DDB049`
+- `src/components/ui/LogoMark.tsx` — the **slide-4 letterhead small cut** (the client's own small-size version with a proportionally thicker stroke, so it stays legible at header size), colors → `currentColor`
+- `src/app/icon.svg` — small cut recolored to the dark colorway on a navy tile
+
+**Discrepancies found during extraction** (pptx wins for the mark — it is the brand identity source):
+- The dc.html web export drew the meridians as a **vertical ellipse**; the pptx artwork uses **two straight vertical lines**. Site now uses the pptx geometry.
+- Gold-on-light differs: pptx `GROUP`/palette use `#C6952C`; dc.html used `#DDB049` everywhere. On-screen tokens are unaffected (gold-bright ≈ `#DDB049` stays the on-navy gold).
+
+Lockup: `RONDASON` in Source Serif 4 letter-spaced caps; website pairs it as `RONDASON GROUP` on one line (live text, not the SVG); the brand sheet stacks `RONDASON` over gold `GROUP` (4px tracking).
 
 ## Imagery
 
-Golden-hour industrial photography (ports, vessels, energy infrastructure) — always **heavily dimmed so it reads as texture, never subject**: hero under a 35→90% navy gradient, Story texture at **8% opacity**, Markets collage at **35% opacity** under navy.
+Golden-hour industrial photography (ports, vessels, energy infrastructure) — always **heavily dimmed so it reads as texture, never subject**. Shipped treatments (elevated from v2's flat opacities): hero photo at 50% under the `.hero-overlay` 100° navy gradient (96→82→62%), Story texture at the client's **8% opacity**, Markets collage at **30%** under the `.markets-overlay` vertical veil. The three used comps are copied to `public/images/` with semantic names (`hero-trade-routes.avif`, `story-texture.png`, `markets-collage.webp`).
 
-Current assets in `Reference/Website/uploads/` — **all unlicensed comps, must be licensed or replaced before launch (TODO)**:
+Source assets in `Reference/Website/uploads/` — **all unlicensed comps, must be licensed or replaced before launch (TODO)**:
 
 | File | Used | License problem |
 |---|---|---|

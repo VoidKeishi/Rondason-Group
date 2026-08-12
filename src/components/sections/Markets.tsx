@@ -1,6 +1,6 @@
+import Image from 'next/image';
 import { Eyebrow } from '@/components/ui/Eyebrow';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
-import { MeridianGlobe } from '@/components/ui/MeridianGlobe';
 
 const MARKETS = [
   {
@@ -18,8 +18,16 @@ const MARKETS = [
 export function Markets() {
   return (
     <section id="markets" className="relative overflow-hidden bg-navy">
-      {/* Whisper-opacity echo of the hero globe cresting from below */}
-      <MeridianGlobe className="pointer-events-none absolute -bottom-[55%] left-1/2 h-auto w-[900px] -translate-x-1/2 opacity-[0.1] lg:w-[1100px]" />
+      {/* Client port/industry collage sunk into the navy field
+          (globe signature stays hero-only — photo replaces the echo here) */}
+      <Image
+        src="/images/markets-collage.webp"
+        alt=""
+        fill
+        sizes="100vw"
+        className="object-cover opacity-30"
+      />
+      <div className="markets-overlay absolute inset-0" />
       <div className="relative mx-auto max-w-[1200px] px-6 py-20 md:px-10 md:py-[120px] lg:px-16">
         <ScrollReveal>
           <Eyebrow tone="dark" className="mb-4">

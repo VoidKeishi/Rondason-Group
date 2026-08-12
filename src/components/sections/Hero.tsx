@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { MeridianGlobe } from '@/components/ui/MeridianGlobe';
 
 export function Hero() {
@@ -6,6 +7,16 @@ export function Hero() {
       id="home"
       className="relative overflow-hidden border-b border-navy-line/40 bg-navy"
     >
+      {/* Client photograph sunk into the navy field as texture */}
+      <Image
+        src="/images/hero-trade-routes.avif"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover opacity-50"
+      />
+      <div className="hero-overlay absolute inset-0" />
       {/* Signature: the meridian globe draws itself on load */}
       <MeridianGlobe
         animated

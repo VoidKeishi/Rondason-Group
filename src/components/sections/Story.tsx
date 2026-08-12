@@ -1,10 +1,19 @@
+import Image from 'next/image';
 import { Eyebrow } from '@/components/ui/Eyebrow';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
 
 export function Story() {
   return (
-    <section id="about" className="bg-cream">
-      <div className="mx-auto grid max-w-[1200px] gap-8 px-6 py-20 md:px-10 md:py-[120px] lg:grid-cols-[0.7fr_1.3fr] lg:gap-[60px] lg:px-16">
+    <section id="about" className="relative overflow-hidden bg-cream">
+      {/* Client texture image at the client's 8% treatment */}
+      <Image
+        src="/images/story-texture.png"
+        alt=""
+        fill
+        sizes="100vw"
+        className="object-cover opacity-[0.08]"
+      />
+      <div className="relative mx-auto grid max-w-[1200px] gap-8 px-6 py-20 md:px-10 md:py-[120px] lg:grid-cols-[0.7fr_1.3fr] lg:gap-[60px] lg:px-16">
         <ScrollReveal>
           <Eyebrow>Our Story</Eyebrow>
         </ScrollReveal>

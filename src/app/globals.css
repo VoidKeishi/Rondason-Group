@@ -103,6 +103,32 @@
 }
 
 /* ============================================
+   Utility Classes
+   ============================================ */
+
+/* Hero photo veil — the client's imagery reads as texture, never subject:
+   the photograph sinks into the navy field, line work stays on top. */
+.hero-overlay {
+  background: linear-gradient(
+    100deg,
+    color-mix(in oklab, var(--color-navy) 96%, transparent) 0%,
+    color-mix(in oklab, var(--color-navy) 82%, transparent) 55%,
+    color-mix(in oklab, var(--color-navy) 62%, transparent) 100%
+  );
+}
+
+/* Markets collage veil — deepens toward top and bottom so the heading and
+   credential line stay legible over the client's port imagery. */
+.markets-overlay {
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklab, var(--color-navy) 88%, transparent) 0%,
+    color-mix(in oklab, var(--color-navy) 55%, transparent) 45%,
+    color-mix(in oklab, var(--color-navy) 92%, transparent) 100%
+  );
+}
+
+/* ============================================
    Hero load orchestration
    Text rises in as the globe draws itself.
    Base state is visible; animation only runs when motion is allowed.

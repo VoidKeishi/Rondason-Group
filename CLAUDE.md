@@ -6,7 +6,7 @@ This file provides guidance to Claude Code when working in this repository.
 
 Landing page for **Rondason Group** — a Singapore-based global physical commodity trading house (Energy + Metals & Mining), founded by David Richardson and Jason Antunovich. Single-route one-pager. The client supplied a **finished desktop design** (`Reference/Website/Rondason Website v2.dc.html`); our job is to implement it as a production Next.js site, then design what the reference leaves undefined (mobile, motion, contact mechanism).
 
-**Status (2026-08-12)**: one-pager implemented, then **redesigned/elevated beyond v2** (see `DESIGN_GUIDELINE.md` → "Elevation pass"): drawn meridian-globe signature replaces all stock photography (no images ship — licensing problem designed out), display type scale, 4-step process, contact-as-destination footer. Build/lint clean, fully static. Uses harvested copy (4 steps, pull quote, credential line) **pending client approval** — open questions in `TODO.md`.
+**Status (2026-08-12)**: one-pager implemented, then **redesigned/elevated beyond v2** (see `DESIGN_GUIDELINE.md` → "Elevation pass"): drawn meridian-globe signature in the hero, display type scale, 4-step process, contact-as-destination footer. Client assets re-integrated on request: the three comps ship from `public/images/` as heavily dimmed texture layers (**unlicensed — licensing is a launch blocker, TODO**), and the circle-mark/lockup vectors are extracted verbatim from `Rondason_Logo.pptx` into `public/logos/` + `LogoMark.tsx`. Build/lint clean, fully static. Uses harvested copy (4 steps, pull quote, credential line) **pending client approval** — open questions in `TODO.md`.
 
 ## Content Source Rule (IMPORTANT)
 
@@ -42,18 +42,18 @@ src/
     layout.tsx          # next/font (Source Serif 4 w/ opsz axis + italic, Public Sans), metadata, JSON-LD
     page.tsx            # the one-pager, composed of section components
     globals.css         # :root tokens + @theme inline + hero/globe load animations
-    icon.svg            # PLACEHOLDER favicon (gold circle mark on navy) — final pending logo ruling
+    icon.svg            # favicon: extracted circle mark, gold on navy — pending circle-vs-diamond ruling
   hooks/
     use-reduced-motion.ts  # useSyncExternalStore over matchMedia
   components/
     nav-links.ts        # shared NAV_LINKS const (Header desktop nav, MobileMenu, Footer)
-    ui/                 # ScrollReveal ('use client'), LogoMark (circle-mark SVG),
+    ui/                 # ScrollReveal ('use client'), LogoMark (extracted circle-mark SVG),
                         # MeridianGlobe (signature hero/markets SVG), Eyebrow
     sections/           # UtilityBar, Header, MobileMenu ('use client'), Hero, Process,
                         # Story, Pillars, Markets, Footer
 ```
 
-No `public/images/` — the site ships zero photographs (drawn SVG cartography instead).
+`public/images/` — the three client comps with semantic names (hero/story/markets), always heavily dimmed; **unlicensed, see TODO**. `public/logos/` — mark + lockup SVGs extracted verbatim from `Reference/Rondason_Logo.pptx` (light + dark colorways).
 
 - **Client-server boundary**: everything server-rendered except `ScrollReveal` and `MobileMenu`.
 - **Fonts**: Source Serif 4 must load with `axes: ["opsz"]` — the optical-size axis is what keeps the 44px hero headline on one line, matching the reference.
@@ -88,7 +88,7 @@ Single route `/`, section order:
 - **Gold**: bright `oklch(0.78 0.13 85)` on navy only; deep `oklch(0.6 0.11 82)` for links/eyebrows on light
 - **Type**: Source Serif 4 headlines at **weight 500 (never bold)** · Public Sans body/UI; gold uppercase eyebrows, 3px tracking
 - **Tagline** (unresolved variants): `GLOBAL COMMODITY MARKETS` vs "Connecting Global Commodity Markets" — see TODO
-- **Logo**: circle globe-meridian mark on web (diamond-R on print); **no vector exists — CSS-only in reference; SVG must be drawn**
+- **Logo**: circle globe-meridian mark on web (diamond-R on print); circle-mark + lockup vectors **extracted from the pptx** in `public/logos/` (pptx geometry = two straight meridian lines, not the dc.html ellipse); diamond-R still has no vector
 
 ## Resource Files
 
