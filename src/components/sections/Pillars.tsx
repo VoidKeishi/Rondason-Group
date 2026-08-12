@@ -27,7 +27,7 @@ function PillarIcon({ glyph }: { glyph: (typeof PILLARS)[number]['glyph'] }) {
   return (
     <div
       aria-hidden="true"
-      className="mx-auto mb-5 flex h-11 w-11 rotate-45 items-center justify-center border-2 border-navy"
+      className="mx-auto mb-6 flex h-11 w-11 rotate-45 items-center justify-center border-2 border-navy"
     >
       {glyph === 'dot' && (
         <div className="h-[9px] w-[9px] -rotate-45 rounded-full bg-navy" />
@@ -42,16 +42,32 @@ function PillarIcon({ glyph }: { glyph: (typeof PILLARS)[number]['glyph'] }) {
 
 export function Pillars() {
   return (
-    <section className="mx-auto grid max-w-[1200px] gap-10 px-6 py-16 md:grid-cols-3 md:gap-11 md:px-10 md:py-[100px] lg:px-16">
-      {PILLARS.map((pillar, i) => (
-        <ScrollReveal key={pillar.title} delay={i * 100} className="text-center">
-          <PillarIcon glyph={pillar.glyph} />
-          <h3 className="mb-3 text-[24px]">{pillar.title}</h3>
-          <p className="text-[14.5px] leading-[1.7] text-body-softer">
-            {pillar.description}
+    <section className="bg-white">
+      <div className="mx-auto max-w-[1200px] px-6 py-20 md:px-10 md:py-[120px] lg:px-16">
+        {/* Pull quote from the marketing pack (p.3), in its italic-gold-serif
+            cover treatment. Harvested copy — pending client approval (TODO). */}
+        <ScrollReveal className="mx-auto mb-16 max-w-[820px] text-center lg:mb-24">
+          <p className="font-display text-[clamp(24px,3vw,34px)] font-medium italic leading-[1.35] text-gold-deep">
+            A single standard of trust, applied to every counterparty, every
+            trade.
           </p>
         </ScrollReveal>
-      ))}
+        <div className="grid gap-12 md:grid-cols-3 md:gap-11">
+          {PILLARS.map((pillar, i) => (
+            <ScrollReveal
+              key={pillar.title}
+              delay={i * 120}
+              className="text-center"
+            >
+              <PillarIcon glyph={pillar.glyph} />
+              <h3 className="mb-3 text-[24px]">{pillar.title}</h3>
+              <p className="mx-auto max-w-[300px] text-[14.5px] leading-[1.7] text-body-softer">
+                {pillar.description}
+              </p>
+            </ScrollReveal>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

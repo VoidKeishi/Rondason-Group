@@ -14,7 +14,7 @@
 
 ## Design & build
 
-- [] Replace/license imagery — `public/images/*-placeholder.*` are the unlicensed comps copied from `Reference/uploads` for dev preview only; must be licensed or replaced before launch.
+- [] Client sign-off on the **elevation redesign** (drawn meridian globe replaces all stock photography; 4-step process, pull quote and credential line surfaced from their marketing pack). If they insist on photography instead, imagery must be licensed — the old comps were unlicensed (Dreamstime watermark / Freepik).
 - [] OG share image (1200×630) from the ruled logo mark; current favicon (`src/app/icon.svg`) is a placeholder (gold circle mark on navy) pending the client's logo ruling.
 - [] Draw the diamond-R mark as SVG if the client rules for it (circle mark is done — `src/components/ui/LogoMark.tsx`).
 - [] Set the real production domain in `layout.tsx` `metadataBase` once rondason.com is confirmed; deploy to Vercel.
@@ -23,6 +23,17 @@
 ---
 
 # DONE
+
+## Elevation redesign session (2026-08-12)
+
+- [x] Redesigned the page beyond the v2 reference (user request: "elevate, not copy"): drawn `MeridianGlobe` SVG signature (hero draw-in orchestration + 10% echo in Markets) replaces **all** stock photography — no images ship, licensing problem designed out.
+- [x] Continuous navy top field (deep-navy utility bar → navy header w/ gold-outline CTA → hero); deep-navy contact footer with `info@rondason.com` at display size ("contact as destination").
+- [x] Display type scale (h1 40→72px, h2 30→44px clamps); italic Source Serif loaded for the marketing-pack pull-quote treatment.
+- [x] Surfaced harvested copy: 4-step process as hairline "stations" with diamond ticks, pull quote above pillars, trade-finance credential under Markets — all pending client approval.
+- [x] Verified via headless screenshots (desktop hero/full/mobile); build + lint clean, fully static; reduced-motion safe (base states visible, animation gated on `no-preference`).
+- Notes / gotchas:
+  - Globe geometry derives from the logo: straight parallels echo the mark's equator bar; stroke draw-in uses the `pathLength={1}` dasharray trick.
+  - `ScrollReveal` renders a `div` — inside `<ol>` grids put it *inside* the `<li>`, never between `ol` and `li`.
 
 ## Build session (2026-08-12)
 

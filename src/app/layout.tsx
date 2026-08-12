@@ -8,6 +8,8 @@ const sourceSerif = Source_Serif_4({
   variable: "--font-source-serif",
   // Variable font with the optical-size axis — the reference loads
   // opsz 8..60, which is what keeps display sizes narrow and elegant.
+  // Italic carries the marketing pack's gold-serif pull-quote treatment.
+  style: ["normal", "italic"],
   axes: ["opsz"],
 });
 

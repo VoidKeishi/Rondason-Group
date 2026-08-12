@@ -6,6 +6,19 @@ A human-friendly guide to the visual system. Theme name: **"Meridian"** — navy
 
 Everything below is measured from the client's own designs: `Reference/Website/Rondason Website v2.dc.html` (the page), `Reference/Website/Rondason Logo.dc.html` + `Reference/Rondason_Logo.pptx` (brand sheet). The client authored all colors in **oklch** — treat oklch as authoritative; hex values are converted/lifted from the pptx XML for tools that need them.
 
+## Elevation pass (2026-08-12) — how the shipped design extends v2
+
+The implemented site is a **redesign that elevates v2**, not a copy. Brand tokens, faces, and copy are unchanged; what changed:
+
+- **Signature: drawn cartography replaces stock photography.** A line-drawn orthographic meridian globe (`src/components/ui/MeridianGlobe.tsx` — circle + meridian ellipses + straight parallels echoing the logo's equator bar + trade-route arcs + pulsing port points, gold on navy) is the hero visual, drawing itself on page load. It echoes at 10% opacity cresting from below in Markets. **No photographs remain on the site** — the unlicensed-imagery problem is designed out, not deferred.
+- **One continuous navy field on top**: utility bar (`--color-navy-deep`) → header (navy, gold-outline CTA) → hero flow together; the page bookends in deep navy at the contact footer.
+- **Display type scale**: hero h1 `clamp(40px, 6vw, 72px)`, section h2 `clamp(30px, 4vw, 44px)` — same faces, same weight 500, bigger stage. Section vertical padding 120px.
+- **Process is now the 4-step sequence** (01 Sourcing → 04 Finance, marketing-pack copy, pending approval) set as stations on a hairline with gold diamond ticks — the numbering encodes a real order.
+- **Pull quote revived** in the marketing pack's italic-gold-serif cover treatment, on white above the pillars; trade-finance credential line closes Markets. (Both harvested copy — client approval tracked in TODO.)
+- **Contact as destination**: `#contact` is a deep-navy footer with `info@rondason.com` set in serif at `clamp(28px, 5vw, 60px)` gold-on-hover — the strongest contact treatment possible with approved copy only.
+- **Motion**: one orchestrated hero moment (globe draws ~1.6s, text rises staggered) + quiet ScrollReveals; all gated on `prefers-reduced-motion`.
+- New token: `--color-navy-deep` `oklch(0.16 0.045 262)` (utility bar, footer). The v2-era hero-overlay gradient and image-texture treatments are retired.
+
 ---
 
 ## Fonts

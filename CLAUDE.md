@@ -6,7 +6,7 @@ This file provides guidance to Claude Code when working in this repository.
 
 Landing page for **Rondason Group** — a Singapore-based global physical commodity trading house (Energy + Metals & Mining), founded by David Richardson and Jason Antunovich. Single-route one-pager. The client supplied a **finished desktop design** (`Reference/Website/Rondason Website v2.dc.html`); our job is to implement it as a production Next.js site, then design what the reference leaves undefined (mobile, motion, contact mechanism).
 
-**Status (2026-08-12)**: app scaffolded and the full one-pager implemented (desktop per v2 + mobile + ScrollReveal motion); build/lint clean, verified against the reference render. Imagery is **unlicensed placeholders** in `public/images/` — must be licensed/replaced before launch. Open client questions in `TODO.md`.
+**Status (2026-08-12)**: one-pager implemented, then **redesigned/elevated beyond v2** (see `DESIGN_GUIDELINE.md` → "Elevation pass"): drawn meridian-globe signature replaces all stock photography (no images ship — licensing problem designed out), display type scale, 4-step process, contact-as-destination footer. Build/lint clean, fully static. Uses harvested copy (4 steps, pull quote, credential line) **pending client approval** — open questions in `TODO.md`.
 
 ## Content Source Rule (IMPORTANT)
 
@@ -39,20 +39,21 @@ npm run lint    # eslint
 ```
 src/
   app/
-    layout.tsx          # next/font (Source Serif 4 w/ opsz axis, Public Sans), metadata, JSON-LD
+    layout.tsx          # next/font (Source Serif 4 w/ opsz axis + italic, Public Sans), metadata, JSON-LD
     page.tsx            # the one-pager, composed of section components
-    globals.css         # :root tokens + @theme inline — source: DESIGN_GUIDELINE.md
+    globals.css         # :root tokens + @theme inline + hero/globe load animations
     icon.svg            # PLACEHOLDER favicon (gold circle mark on navy) — final pending logo ruling
   hooks/
     use-reduced-motion.ts  # useSyncExternalStore over matchMedia
   components/
     nav-links.ts        # shared NAV_LINKS const (Header desktop nav, MobileMenu, Footer)
-    ui/                 # ScrollReveal ('use client'), LogoMark (circle-mark SVG), Eyebrow
+    ui/                 # ScrollReveal ('use client'), LogoMark (circle-mark SVG),
+                        # MeridianGlobe (signature hero/markets SVG), Eyebrow
     sections/           # UtilityBar, Header, MobileMenu ('use client'), Hero, Process,
                         # Story, Pillars, Markets, Footer
-public/images/          # *-placeholder.* — unlicensed comps copied from Reference/uploads,
-                        # replace before launch (TODO)
 ```
+
+No `public/images/` — the site ships zero photographs (drawn SVG cartography instead).
 
 - **Client-server boundary**: everything server-rendered except `ScrollReveal` and `MobileMenu`.
 - **Fonts**: Source Serif 4 must load with `axes: ["opsz"]` — the optical-size axis is what keeps the 44px hero headline on one line, matching the reference.
