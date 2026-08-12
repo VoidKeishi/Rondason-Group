@@ -21,7 +21,7 @@ export function Markets() {
       {/* Client port/industry collage sunk into the navy field
           (globe signature stays hero-only — photo replaces the echo here) */}
       <Image
-        src="/images/markets-collage.webp"
+        src="/images/industry-meets-sunset.png"
         alt=""
         fill
         sizes="100vw"

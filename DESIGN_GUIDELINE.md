@@ -122,7 +122,7 @@ Lockup: `RONDASON` in Source Serif 4 letter-spaced caps; website pairs it as `RO
 
 ## Imagery
 
-Golden-hour industrial photography (ports, vessels, energy infrastructure) — always **heavily dimmed so it reads as texture, never subject**. Shipped treatments (elevated from v2's flat opacities): hero photo at 50% under the `.hero-overlay` 100° navy gradient (96→82→62%), Story texture at the client's **8% opacity**, Markets collage at **30%** under the `.markets-overlay` vertical veil. The three used comps are copied to `public/images/` with semantic names (`hero-trade-routes.avif`, `story-texture.png`, `markets-collage.webp`).
+Golden-hour industrial photography (ports, vessels, energy infrastructure) — always **heavily dimmed so it reads as texture, never subject**. Shipped treatments (elevated from v2's flat opacities): hero photo at 50% under the `.hero-overlay` 100° navy gradient (96→82→62%), Story texture at the client's **8% opacity**, Markets collage at **30%** under the `.markets-overlay` vertical veil. The three used comps are copied to `public/images/` with semantic names (`hero-trade-routes.avif`, `story-texture.png`, `industry-meets-sunset.png`).
 
 Source assets in `Reference/Website/uploads/` — **all unlicensed comps, must be licensed or replaced before launch (TODO)**:
 
