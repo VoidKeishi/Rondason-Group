@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Placeholder favicon: circle globe-meridian mark, gold on navy.
+       Final favicon pending client's logo-mark ruling (see TODO.md). -->
+  <rect width="32" height="32" rx="4" fill="#08152C"/>
+  <g stroke="#E7B643" stroke-width="2" fill="none">
+    <circle cx="16" cy="16" r="11"/>
+    <ellipse cx="16" cy="16" rx="4.75" ry="11"/>
+    <line x1="5" y1="16" x2="27" y2="16"/>
+  </g>
+</svg>

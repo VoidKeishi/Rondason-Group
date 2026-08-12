@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+/* ============================================
+   Rondason Group — "Meridian" design tokens
+   Source: DESIGN_GUIDELINE.md (oklch authored by client, authoritative)
+   ============================================ */
+
+:root {
+  /* --- Brand core --- */
+  --color-navy: oklch(0.2 0.05 260); /* #08152C — THE brand color */
+  --color-gold-bright: oklch(0.78 0.13 85); /* gold on navy only */
+  --color-gold: oklch(0.7 0.13 82); /* decorative gold on light */
+  --color-gold-deep: oklch(0.6 0.11 82); /* links/eyebrows on light (AA) */
+  --color-gold-hover: oklch(0.5 0.11 82);
+  --color-cream: oklch(0.97 0.012 90); /* #F8F5EC — Our Story bg */
+  --color-paper: oklch(0.99 0.005 90);
+
+  /* --- Neutrals --- */
+  --color-ink: oklch(0.25 0.01 260); /* nav links, default dark text */
+  --color-body: oklch(0.35 0.02 260); /* Story paragraphs */
+  --color-body-soft: oklch(0.4 0.02 260); /* Process paragraph */
+  --color-body-softer: oklch(0.45 0.02 260); /* pillar descriptions */
+  --color-muted: oklch(0.5 0.02 260); /* footer text */
+  --color-faint: oklch(0.6 0.02 260); /* copyright line */
+  --color-line: oklch(0.88 0.01 90); /* footer rule */
+  --color-line-light: oklch(0.9 0.01 90); /* header border */
+
+  /* --- On-navy set --- */
+  --color-on-navy: oklch(0.97 0.01 90); /* headlines/wordmark on dark */
+  --color-on-navy-body: oklch(0.9 0.02 90); /* hero sub, utility bar */
+  --color-on-navy-muted: oklch(0.82 0.02 90); /* markets card body */
+  --color-navy-line: oklch(0.4 0.04 260); /* markets card border */
+
+  /* --- Motion --- */
+  --ease-flow: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 200ms;
+  --duration-base: 400ms;
+  --duration-smooth: 700ms;
+}
+
+/* ============================================
+   Tailwind v4 Theme Extension
+   ============================================ */
+
+@theme inline {
+  /* --- Font families (from next/font CSS variables) --- */
+  --font-display: var(--font-source-serif);
+  --font-sans: var(--font-public-sans);
+  /* --- Brand colors mapped to Tailwind --- */
+  --color-navy: var(--color-navy);
+  --color-gold-bright: var(--color-gold-bright);
+  --color-gold: var(--color-gold);
+  --color-gold-deep: var(--color-gold-deep);
+  --color-gold-hover: var(--color-gold-hover);
+  --color-cream: var(--color-cream);
+  --color-paper: var(--color-paper);
+  --color-ink: var(--color-ink);
+  --color-body: var(--color-body);
+  --color-body-soft: var(--color-body-soft);
+  --color-body-softer: var(--color-body-softer);
+  --color-muted: var(--color-muted);
+  --color-faint: var(--color-faint);
+  --color-line: var(--color-line);
+  --color-line-light: var(--color-line-light);
+  --color-on-navy: var(--color-on-navy);
+  --color-on-navy-body: var(--color-on-navy-body);
+  --color-on-navy-muted: var(--color-on-navy-muted);
+  --color-navy-line: var(--color-navy-line);
+}
+
+/* ============================================
+   Base Styles
+   ============================================ */
+
+@layer base {
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    font-family: var(--font-public-sans), system-ui, sans-serif;
+    color: var(--color-body);
+    background: #fff;
+  }
+
+  /* Headlines: Source Serif 4 at weight 500 — never bold (brand rule) */
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-source-serif), Georgia, serif;
+    font-weight: 500;
+    color: var(--color-navy);
+  }
+}
+
+/* ============================================
+   Utility Classes
+   ============================================ */
+
+/* Hero image overlay — the only gradient in the brand */
+.hero-overlay {
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklab, var(--color-navy) 35%, transparent) 0%,
+    color-mix(in oklab, var(--color-navy) 90%, transparent) 78%
+  );
+}
+
+/* h1 legibility over the hero image */
+.hero-title-shadow {
+  text-shadow: 0 2px 16px oklch(0.1 0.02 260 / 0.6);
+}
