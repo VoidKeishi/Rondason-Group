@@ -13,6 +13,11 @@ const MARKETS = [
     description:
       'Base metals and mined commodities, sourced and delivered across global supply chains.',
   },
+  {
+    title: 'Agriculture',
+    description:
+      'Grains, oilseeds and soft commodities moved from origin to destination markets worldwide.',
+  },
 ] as const;
 
 export function Markets() {
@@ -34,15 +39,15 @@ export function Markets() {
             Markets
           </Eyebrow>
           <h2 className="mb-12 max-w-[640px] text-[clamp(30px,4vw,44px)] leading-[1.15] text-on-navy lg:mb-16">
-            Two trading verticals, one global reach
+            Three trading verticals, one global reach
           </h2>
         </ScrollReveal>
-        <div className="grid gap-6 md:grid-cols-2 md:gap-10">
+        <div className="grid gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
           {MARKETS.map((market, i) => (
             <ScrollReveal
               key={market.title}
               delay={i * 120}
-              className="rounded-[4px] border border-navy-line bg-navy/60 p-8 transition-colors duration-700 hover:border-gold-bright/50 lg:p-12"
+              className="rounded-[4px] border border-navy-line bg-navy/60 p-8 transition-colors duration-700 hover:border-gold-bright/50 lg:p-10"
             >
               <h3 className="mb-4 text-[26px] text-on-navy">{market.title}</h3>
               <p className="max-w-[420px] text-[15px] leading-[1.75] text-on-navy-muted">

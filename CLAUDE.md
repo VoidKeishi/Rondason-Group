@@ -4,7 +4,7 @@ This file provides guidance to Claude Code when working in this repository.
 
 ## Project Overview
 
-Landing page for **Rondason Group** — a Singapore-based global physical commodity trading house (Energy + Metals & Mining), founded by David Richardson and Jason Antunovich. Single-route one-pager. The client supplied a **finished desktop design** (`Reference/Website/Rondason Website v2.dc.html`); our job is to implement it as a production Next.js site, then design what the reference leaves undefined (mobile, motion, contact mechanism).
+Landing page for **Rondason Group** — a Singapore-based global physical commodity trading house (Energy + Metals & Mining + Agriculture), founded by David Richardson and Jason Antunovich. Single-route one-pager. The client supplied a **finished desktop design** (`Reference/Website/Rondason Website v2.dc.html`); our job is to implement it as a production Next.js site, then design what the reference leaves undefined (mobile, motion, contact mechanism).
 
 **Status (2026-08-12)**: one-pager implemented, then **redesigned/elevated beyond v2** (see `DESIGN_GUIDELINE.md` → "Elevation pass"): drawn meridian-globe signature in the hero, display type scale, 4-step process, contact-as-destination footer. Client assets re-integrated on request: the three comps ship from `public/images/` as heavily dimmed texture layers (**unlicensed — licensing is a launch blocker, TODO**), and the circle-mark/lockup vectors are extracted verbatim from `Rondason_Logo.pptx` into `public/logos/` + `LogoMark.tsx`. Build/lint clean, fully static. Uses harvested copy (4 steps, pull quote, credential line) **pending client approval** — open questions in `TODO.md`.
 
@@ -78,7 +78,7 @@ Single route `/`, section order:
 4. `#process` Our Process (white, centred)
 5. `#about` Our Story (cream, 8% texture)
 6. Three Pillars — Trust / Expertise / Foresight (white)
-7. `#markets` Markets — Energy | Metals & Mining (navy, 35% collage)
+7. `#markets` Markets — Energy | Metals & Mining | Agriculture (navy, 35% collage)
 8. `#contact` Footer (address, nav, email — no form in the design)
 
 ## Brand Quick Reference

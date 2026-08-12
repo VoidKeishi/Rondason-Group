@@ -14,4 +14,4 @@ Client brand directive, verbatim from `Rondason_Logo.pptx` (slide 4) and `Rondas
 
 > "Brand note: reserve navy/gold and this mark exclusively for Rondason, use the tagline consistently across every touchpoint, and secure rondason.com and trademark registration early to lock the name in as the business scales."
 
-Company: Rondason Group — Singapore global physical commodity trading house. Two verticals: Energy (crude, refined products, gas, coal) and Metals & Mining. Two co-founders: David Richardson and Jason Antunovich.
+Company: Rondason Group — Singapore global physical commodity trading house. Three verticals: Energy (crude, refined products, gas, coal), Metals & Mining, and Agriculture (grains, oilseeds, softs — added by the client 2026-08-12, after the v2 design). Two co-founders: David Richardson and Jason Antunovich.

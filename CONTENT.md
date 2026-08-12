@@ -88,13 +88,15 @@ Note: the footer IS the contact section. There is no contact form anywhere in th
 
 ### Section 5: Markets (`#markets`, navy bg, 35%-opacity collage image)
 
-- **Layout**: navy section, background collage `uploads/industries-future-photo-collage-modern-sustainable-energy-construction-mining-349228743.webp` at 35% opacity (**visibly Dreamstime-watermarked — must be licensed or replaced, TODO**); 2 bordered cards
+- **Layout**: navy section, background collage `uploads/industries-future-photo-collage-modern-sustainable-energy-construction-mining-349228743.webp` at 35% opacity (**visibly Dreamstime-watermarked — must be licensed or replaced, TODO**); 3 bordered cards
 - **Eyebrow**: `MARKETS`
-- **Headline (h2)**: "Two trading verticals, one global reach"
+- **Headline (h2)**: "Three trading verticals, one global reach" *(v2 says "Two" — updated when the client added the third vertical)*
 - **Card 1 — Energy**: "Crude, refined products, gas and coal — physical trading across the world's ports and terminals."
 - **Card 2 — Metals & Mining**: "Base metals and mined commodities, sourced and delivered across global supply chains."
   - *(v1 and MP say "sourced, financed and delivered" — v2 drops "financed". v2 canonical; variant worth confirming with client since the finance credential is a selling point.)*
-- **Source**: v2 markets section; deck slide 5.
+- **Card 3 — Agriculture**: "Grains, oilseeds and soft commodities moved from origin to destination markets worldwide."
+  - *(Not in v2. Supplied by the client directly on 2026-08-12 as a design screenshot of the card — copy transcribed verbatim from that image.)*
+- **Source**: v2 markets section; deck slide 5. Agriculture card: client screenshot, 2026-08-12.
 
 ### Section 6: Footer / Contact — see Global Elements above.
 

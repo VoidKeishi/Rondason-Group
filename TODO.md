@@ -10,6 +10,7 @@
 - [] **Phone attribution.** Only one real number exists (`+65 9040 4928`, utility bar); business cards show placeholder `+65 0000 0000`. Confirm the number is correct for public display and whose it is.
 - [] **Domain & hosting.** Brand note says "secure rondason.com early" — is it registered? DNS access for Vercel? Who owns the registrar account?
 - [] **Optional substance.** Any stats (volumes, offices, founding year), team photos/bios, partner or bank logos they can supply? The About section is ~90 words and the page has no credentials beyond copy.
+- [] **Agriculture vertical — knock-on copy.** The third market card (added 2026-08-12 from the client's screenshot) is live, and the Markets headline now reads "Three trading verticals". Other copy still describes the business as energy + metals only: the Expertise pillar ("Decades of combined trading experience across **energy, metals and mining** markets worldwide") and the Our Story / deck text. Should those be reworded to include agriculture? Also: does the deck/stationery need the same update, and is there a softs-specific image for the Markets background?
 - [] **Harvested copy approval.** OK to use the marketing-pack 4-step process (Sourcing/Trading/Logistics/Finance), the pull quote, and the trade-finance credential line on the site? They exist in client material but not in the approved v2 page (see CONTENT.md → Harvested copy).
 
 ## Design & build
