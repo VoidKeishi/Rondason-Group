@@ -23,7 +23,7 @@ const publicSans = Public_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.rondason.com"),
   title: {
-    default: "Rondason Group — Connecting Global Commodity Markets",
+    default: "Rondason Group - Connecting Global Commodity Markets",
     template: "%s | Rondason Group",
   },
   description:
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Rondason Group — Connecting Global Commodity Markets",
+    title: "Rondason Group - Connecting Global Commodity Markets",
     description:
       "Global physical commodity trading across energy, metals and mining — founded by industry experts, headquartered in Singapore.",
     url: "https://www.rondason.com",
