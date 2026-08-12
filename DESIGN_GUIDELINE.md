@@ -98,7 +98,7 @@ Contrast notes: deep gold on white ≈ 4.9:1 (AA for the 13px bold-tracked eyebr
 
 Two marks exist in the client material; the client still has to rule on which one wins (TODO).
 
-1. **Circle mark** (globe/meridian) — **used on the website and brand sheet**: circle outline containing **two straight vertical meridian lines** and a horizontal equator bar. Navy `#08152C` on light; gold `#DDB049` on dark. Header 30px, footer 26px, brand-sheet hero 76px.
+1. **Circle mark** (globe/meridian) — **used on the website and brand sheet**: circle outline containing a **curved vertical meridian** (a tall ellipse whose poles meet the circle, `rx = 0.365 × r`) and a horizontal equator bar. Navy `#08152C` on light; gold `#DDB049` on dark. Header 30px, footer 26px, brand-sheet hero 76px.
 2. **Diamond-R mark** — used on ALL stationery, deck template, marketing pack: 45°-rotated square outline with counter-rotated Source Serif 4 "R". Gold-bright outline + white R on navy; navy outline + navy R on light. Still CSS-only, no vector.
 
 Working rule until the client decides: **website = circle mark** (matches v2), print = diamond-R.
@@ -114,8 +114,8 @@ The circle mark and lockup are **extracted verbatim from `Reference/Rondason_Log
 - `src/components/ui/LogoMark.tsx` — the **slide-4 letterhead small cut** (the client's own small-size version with a proportionally thicker stroke, so it stays legible at header size), colors → `currentColor`
 - `src/app/icon.svg` — small cut recolored to the dark colorway on a navy tile
 
-**Discrepancies found during extraction** (pptx wins for the mark — it is the brand identity source):
-- The dc.html web export drew the meridians as a **vertical ellipse**; the pptx artwork uses **two straight vertical lines**. Site now uses the pptx geometry.
+**Discrepancies found during extraction** (pptx wins for the mark — it is the brand identity source), with one client override:
+- **Meridian geometry — settled by the client (2026-08-12).** The pptx artwork drew two straight vertical meridian lines; the dc.html web export drew a curved ellipse. The client supplied reference artwork and asked for the curved version, so every mark on the site now draws a single **meridian ellipse** in place of the two bars: same circle, same equator bar, `rx = 0.365 × r`, `ry = r` so the ellipse poles land on the circle. Measured off the client's reference image; everything else in the vectors is still the untouched pptx path data.
 - Gold-on-light differs: pptx `GROUP`/palette use `#C6952C`; dc.html used `#DDB049` everywhere. On-screen tokens are unaffected (gold-bright ≈ `#DDB049` stays the on-navy gold).
 
 Lockup: `RONDASON` in Source Serif 4 letter-spaced caps; website pairs it as `RONDASON GROUP` on one line (live text, not the SVG); the brand sheet stacks `RONDASON` over gold `GROUP` (4px tracking).

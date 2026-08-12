@@ -2,7 +2,7 @@
 
 ## Client follow-ups
 
-- [] **Which logo mark is official — circle globe-meridian or diamond-R?** The website design uses the circle, all stationery uses the diamond-R. Now load-bearing: the header, footer, favicon and OG image all need one answer. Circle-mark + lockup vectors are now extracted from `Rondason_Logo.pptx` into `public/logos/`; the diamond-R still has no vector. Also confirm the mark geometry: the pptx artwork (two straight meridian lines — now used on the site) differs from the dc.html web export (ellipse meridian), and gold-on-light differs (`#C6952C` pptx vs `#DDB049` dc.html).
+- [] **Which logo mark is official — circle globe-meridian or diamond-R?** The website design uses the circle, all stationery uses the diamond-R. Now load-bearing: the header, footer, favicon and OG image all need one answer. Circle-mark + lockup vectors are now extracted from `Rondason_Logo.pptx` into `public/logos/`; the diamond-R still has no vector. Meridian geometry is now settled — the client supplied reference artwork and chose the **curved meridian**, so the two straight pptx bars were replaced by a meridian ellipse everywhere. Still open on this item: gold-on-light differs (`#C6952C` pptx vs `#DDB049` dc.html).
 - [] **Exact legal entity name?** Website footer says "Rondason Group Pte. Ltd."; letterhead says "Rondason Pte. Ltd." — the footer legal line must match the ACRA registration.
 - [] **Official tagline?** Brand note demands one tagline "consistently across every touchpoint", but material alternates between `GLOBAL COMMODITY MARKETS` (eyebrow/stationery) and "Connecting Global Commodity Markets" (deck/marketing-pack cover).
 - [] **Image licensing — LAUNCH BLOCKER.** The site now ships the three client comps (`public/images/`) per the client-asset request, and all are unlicensed — the Markets collage carries a Dreamstime watermark; hero + alternates are Freepik previews. Client must buy licenses or approve replacements before launch (budget for stock or commissioned photography?).
@@ -34,7 +34,13 @@
   - The pptx wordmark fonts must be installed before rendering or LibreOffice substitutes: Source Serif 4 variable TTF works, but **variable Public Sans exports as Type3 bitmaps** — use the static USWDS release TTFs (fontconfig via `FONTCONFIG_FILE` pointing at a scratch fonts dir, no system install).
   - pdftocairo emits stroked paths with a `matrix(1,0,0,-1,0,810)` flip transform — account for it when computing crop boxes.
   - pptx raw shape offsets don't match the render (group transforms); trust the rendered PDF/SVG, not hand-decoded EMU.
-  - Mark geometry discrepancy discovered: pptx = two straight meridian lines; dc.html web export = ellipse meridian. pptx adopted (brand identity source); flagged for client confirmation.
+  - Mark geometry discrepancy discovered: pptx = two straight meridian lines; dc.html web export = ellipse meridian. pptx adopted (brand identity source); flagged for client confirmation — **later overridden by the client, see below**.
+
+## Logo meridian revision (2026-08-12)
+
+- [x] Client supplied reference artwork of the mark with a **curved meridian** and asked us to match it. Measured the reference image (circle stroke centerline radius vs. meridian half-width) → the meridian is an ellipse with `rx ≈ 0.365 × r` and poles meeting the circle. Replaced the two straight vertical bars with a single `<ellipse>` in `LogoMark.tsx`, `src/app/icon.svg` and all four `public/logos/*.svg`; circle, equator bar, stroke weights and the wordmark outlines are untouched.
+- [x] Verified by re-rendering the marks and overlaying them against the client's reference (widths match within ~1px at reference scale); build + lint clean.
+- Note: `MeridianGlobe.tsx` (hero signature) already drew ellipse meridians, so the hero graphic and the logo now share the same geometry — no change needed there.
 
 ## Elevation redesign session (2026-08-12)
 

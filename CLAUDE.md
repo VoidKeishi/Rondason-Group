@@ -88,7 +88,7 @@ Single route `/`, section order:
 - **Gold**: bright `oklch(0.78 0.13 85)` on navy only; deep `oklch(0.6 0.11 82)` for links/eyebrows on light
 - **Type**: Source Serif 4 headlines at **weight 500 (never bold)** · Public Sans body/UI; gold uppercase eyebrows, 3px tracking
 - **Tagline** (unresolved variants): `GLOBAL COMMODITY MARKETS` vs "Connecting Global Commodity Markets" — see TODO
-- **Logo**: circle globe-meridian mark on web (diamond-R on print); circle-mark + lockup vectors **extracted from the pptx** in `public/logos/` (pptx geometry = two straight meridian lines, not the dc.html ellipse); diamond-R still has no vector
+- **Logo**: circle globe-meridian mark on web (diamond-R on print); circle-mark + lockup vectors **extracted from the pptx** in `public/logos/`, with the meridian revised to the **curved ellipse** the client asked for (2026-08-12) in place of the pptx's two straight bars; diamond-R still has no vector
 
 ## Resource Files
 
@@ -104,3 +104,13 @@ Single route `/`, section order:
 
 - Extract pptx text with `python3` + `zipfile`/XML (no pptx lib installed); AVIFs have no local decoder — view them in a browser.
 - Use **Context7 MCP** for up-to-date Next.js/React/Tailwind docs during implementation.
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->
