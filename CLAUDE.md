@@ -47,6 +47,7 @@ src/
     use-reduced-motion.ts  # useSyncExternalStore over matchMedia
   components/
     nav-links.ts        # shared NAV_LINKS const (Header desktop nav, MobileMenu, Footer)
+    phone-numbers.ts    # shared PHONE_NUMBERS const (UtilityBar, Footer, layout JSON-LD)
     ui/                 # ScrollReveal ('use client'), LogoMark (extracted circle-mark SVG),
                         # MeridianGlobe (signature hero/markets SVG), Eyebrow
     sections/           # UtilityBar, Header, MobileMenu ('use client'), Hero, Process,
@@ -72,7 +73,7 @@ Detailed content, design direction, and style specs live in separate files — *
 
 Single route `/`, section order:
 
-1. Utility bar (navy — email · phone · Singapore)
+1. Utility bar (navy — email · Singapore / Australia / Japan phone numbers)
 2. Header (circle mark + RONDASON GROUP · anchor nav · "Get in Touch")
 3. `#home` Hero — "Connecting Global Commodity Markets"
 4. `#process` Our Process (white, centred)

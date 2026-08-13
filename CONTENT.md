@@ -17,10 +17,22 @@ Source files (all in `Reference/`):
 ### Utility bar (navy, top of page)
 
 ```
-Email: info@rondason.com    +65 9040 4928    Singapore
+Email: info@rondason.com    Singapore +65 9040 4928    Australia +61 430 353 343    Japan +81 70 1253 3343
 ```
 
-- **Source**: v2 utility bar. The phone number also appears on deck slide 6; it is the only real phone number anywhere (business cards use placeholder `+65 0000 0000`).
+- **Source**: v2 utility bar, plus the Australia and Japan numbers supplied by the client on 2026-08-13. The client also asked that the original number be labelled "Singapore" — that label replaces the bare "Singapore" location tag the v2 bar ended with.
+- The Singapore number is the main line and stays visible from `sm` up; Australia and Japan appear from `lg` up, where the bar has room.
+- The Singapore number also appears on deck slide 6. Business cards still show the placeholder `+65 0000 0000`.
+
+### Contact numbers (all three locations)
+
+| Location | Number |
+|---|---|
+| Singapore (main) | +65 9040 4928 |
+| Australia | +61 430 353 343 |
+| Japan | +81 70 1253 3343 |
+
+- **Source**: client, 2026-08-13. Single source of truth in code: `src/components/phone-numbers.ts` (utility bar, footer, and JSON-LD contact points all read from it).
 
 ### Header
 
@@ -38,6 +50,7 @@ Email: info@rondason.com    +65 9040 4928    Singapore
   ```
 - **Middle**: nav repeat (Home · About · Markets · Contact)
 - **Right**: `info@rondason.com` (mailto link) · `www.rondason.com`
+- **Contact block** (above the divider, under the large email): all three numbers as labelled `tel:` links — Singapore · Australia · Japan (added 2026-08-13), then `www.rondason.com`
 - **Legal line**: `© 2026 Rondason Group Pte. Ltd. All rights reserved.`
   - *Inconsistency*: letterhead footer says `Rondason Pte. Ltd. — Registered in Singapore`. Legal entity name unconfirmed — see TODO client follow-ups.
 - **Source**: v2 footer.
@@ -130,7 +143,7 @@ Candidates for enriching the build — each needs client approval before use on 
 
 | Site element | Copy source | Notes |
 |---|---|---|
-| Utility bar | v2 | Only place the real phone appears besides deck slide 6 |
+| Utility bar | v2 + client 2026-08-13 | Singapore number from v2/deck slide 6; Australia + Japan supplied directly |
 | Hero eyebrow + h1 + sub | v2 = deck slide 1 | Identical in both |
 | Our Process | v2 (deck slide 2 shorter) | v2 canonical |
 | Our Story ¶1–¶2 | v2 (deck slide 3 shorter) | v2 canonical |

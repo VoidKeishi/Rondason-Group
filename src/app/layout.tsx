@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Source_Serif_4, Public_Sans } from "next/font/google";
+import { PHONE_NUMBERS } from "@/components/phone-numbers";
 import "./globals.css";
 
 const sourceSerif = Source_Serif_4({
@@ -87,12 +88,13 @@ export default function RootLayout({
                     "postalCode": "189761",
                     "addressCountry": "SG",
                   },
-                  "contactPoint": {
+                  "contactPoint": PHONE_NUMBERS.map(({ tel, country }) => ({
                     "@type": "ContactPoint",
-                    "telephone": "+65-9040-4928",
+                    "telephone": tel,
                     "email": "info@rondason.com",
                     "contactType": "customer service",
-                  },
+                    "areaServed": country,
+                  })),
                 },
                 {
                   "@type": "WebSite",
