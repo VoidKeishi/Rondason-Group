@@ -1,4 +1,5 @@
 import { UtilityBar } from "@/components/sections/UtilityBar";
+import { MarketTicker } from "@/components/sections/MarketTicker";
 import { Header } from "@/components/sections/Header";
 import { Hero } from "@/components/sections/Hero";
 import { Process } from "@/components/sections/Process";
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <>
       <UtilityBar />
+      <MarketTicker />
       <Header />
       <main>
         <Hero />
