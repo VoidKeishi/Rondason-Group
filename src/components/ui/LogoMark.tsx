@@ -10,6 +10,13 @@
  * Client revision (2026-08-12): the two straight vertical meridians are
  * replaced by a single curved meridian ellipse, per the client's reference
  * artwork — same circle, same equator bar, curvier inside.
+ *
+ * Client revision (2026-08-19, settled after two richer iterations): the
+ * mark keeps ONLY the main lines — circle, curved meridian, equator bar —
+ * with the equator extended to the full diameter (the pptx bar stopped short
+ * of the right rim). A secondary graticule and then a port-dots-with-route-
+ * arc treatment were both tried and rejected by the client ("reduce detail,
+ * keep the main lines"); the hero globe carries the rich line work instead.
  */
 export function LogoMark({
   size = 30,
@@ -49,10 +56,12 @@ export function LogoMark({
         rx="9.032325"
         ry="24.746094"
       />
+      {/* Equator bar, extended to the full diameter (2026-08-19, client
+          request — the pptx bar stopped short of the right rim). */}
       <path
         fillRule="evenodd"
         fill="currentColor"
-        d="M 170.21875 473.867188 L 147.714844 473.867188 L 147.714844 471.65625 L 192.699219 471.65625 L 192.699219 473.867188 Z M 170.21875 473.867188"
+        d="M 147.714844 473.867188 L 147.714844 471.65625 L 197.207031 471.65625 L 197.207031 473.867188 Z"
       />
     </svg>
   );

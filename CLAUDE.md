@@ -49,7 +49,9 @@ src/
     nav-links.ts        # shared NAV_LINKS const (Header desktop nav, MobileMenu, Footer)
     phone-numbers.ts    # shared PHONE_NUMBERS const (UtilityBar, Footer, layout JSON-LD)
     ui/                 # ScrollReveal ('use client'), LogoMark (extracted circle-mark SVG),
-                        # MeridianGlobe (signature hero/markets SVG), Eyebrow
+                        # MeridianGlobe (signature hero SVG: logo geometry + masked continent
+                        # layer from globe-map-data.ts, regenerate via
+                        # scripts/generate-globe-map.mjs), Eyebrow
     sections/           # UtilityBar, Header, MobileMenu ('use client'), Hero, Process,
                         # Story, Pillars, Markets, Footer
 ```
@@ -89,7 +91,7 @@ Single route `/`, section order:
 - **Gold**: bright `oklch(0.78 0.13 85)` on navy only; deep `oklch(0.6 0.11 82)` for links/eyebrows on light
 - **Type**: Source Serif 4 headlines at **weight 500 (never bold)** · Public Sans body/UI; gold uppercase eyebrows, 3px tracking
 - **Tagline** (unresolved variants): `GLOBAL COMMODITY MARKETS` vs "Connecting Global Commodity Markets" — see TODO
-- **Logo**: circle globe-meridian mark on web (diamond-R on print); circle-mark + lockup vectors **extracted from the pptx** in `public/logos/`, with the meridian revised to the **curved ellipse** the client asked for (2026-08-12) in place of the pptx's two straight bars; diamond-R still has no vector
+- **Logo**: circle globe-meridian mark on web (diamond-R on print); circle-mark + lockup vectors **extracted from the pptx** in `public/logos/`, with the meridian revised to the **curved ellipse** the client asked for (2026-08-12) in place of the pptx's two straight bars, and the **equator bar extended to the full diameter** (2026-08-19, settled — richer line-work treatments were tried and rejected by the client; the mark keeps only its three main strokes, the hero globe carries the rich line work); diamond-R still has no vector
 
 ## Resource Files
 
