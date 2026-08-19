@@ -67,8 +67,9 @@ export function Footer() {
           ))}
         </nav>
       </div>
-      <div className="mx-auto mt-16 max-w-[1200px] text-[11.5px] text-on-navy-muted/70">
-        © 2026 Rondason Group Pte. Ltd. All rights reserved.
+      <div className="mx-auto mt-16 flex max-w-[1200px] flex-wrap gap-x-3 gap-y-1 text-[11.5px] text-on-navy-muted/70">
+        <span>© 2026 Rondason Group Pte. Ltd. All rights reserved.</span>
+        <span>UEN 202637629K</span>
       </div>
     </footer>
   );

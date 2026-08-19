@@ -51,9 +51,10 @@ Email: info@rondason.com    Singapore +65 9040 4928    Australia +61 430 353 343
 - **Middle**: nav repeat (Home · About · Markets · Contact)
 - **Right**: `info@rondason.com` (mailto link) · `www.rondason.com`
 - **Contact block** (above the divider, under the large email): all three numbers as labelled `tel:` links — Singapore · Australia · Japan (added 2026-08-13), then `www.rondason.com`
-- **Legal line**: `© 2026 Rondason Group Pte. Ltd. All rights reserved.`
+- **Legal line**: `© 2026 Rondason Group Pte. Ltd. All rights reserved.` · `UEN 202637629K`
   - *Inconsistency*: letterhead footer says `Rondason Pte. Ltd. — Registered in Singapore`. Legal entity name unconfirmed — see TODO client follow-ups.
-- **Source**: v2 footer.
+  - UEN also emitted in the Organization JSON-LD as an `identifier` PropertyValue (`propertyID: "UEN"`).
+- **Source**: v2 footer; UEN from client, 2026-08-19.
 
 Note: the footer IS the contact section. There is no contact form anywhere in the design — lead capture is the mailto link and the "Get in Touch" anchor. Open question for client (TODO).
 

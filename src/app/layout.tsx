@@ -88,6 +88,12 @@ export default function RootLayout({
                     "postalCode": "189761",
                     "addressCountry": "SG",
                   },
+                  "identifier": {
+                    "@type": "PropertyValue",
+                    "propertyID": "UEN",
+                    "name": "Unique Entity Number",
+                    "value": "202637629K",
+                  },
                   "contactPoint": PHONE_NUMBERS.map(({ tel, country }) => ({
                     "@type": "ContactPoint",
                     "telephone": tel,
