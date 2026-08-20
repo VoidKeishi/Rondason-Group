@@ -9,8 +9,7 @@ const MARKETS = [
   },
   {
     title: 'Metals & Mining',
-    description:
-      'Base metals and mined commodities, sourced and delivered across global supply chains.',
+    description: 'Base metals and mined commodities.',
   },
   {
     title: 'Agriculture',

@@ -67,7 +67,7 @@ Note: the footer IS the contact section. There is no contact form anywhere in th
 - **Layout**: 520px-tall image (container ship / glowing trade routes), 180° navy gradient overlay (35% → 90% at 78%), text bottom-left, max-width 760px
 - **Eyebrow**: `GLOBAL COMMODITY MARKETS`
 - **Headline (h1)**: "Connecting Global Commodity Markets"
-- **Body**: "Founded by industry experts with global expertise, Rondason Group is built for the next era of commodity trading — spanning energy, metals, and the infrastructure that connects them."
+- **Body**: "Rondason Group uses its extensive global network to facilitate connections between buyers and sellers in the energy, metals, and agriculture sectors." *(client revision, 2026-08-20 — replaces the v2 line "Founded by industry experts with global expertise, Rondason Group is built for the next era of commodity trading — spanning energy, metals, and the infrastructure that connects them.")*
 - **CTA**: none in-section (header "Get in Touch" serves this role)
 - **Image**: `uploads/cargo-ship-loaded-with-containers-digitallyilluminated-world-map-with-interconnected-trade-routes-depicting-global-shipping-logistics_124507-307942.avif` — Freepik comp, unlicensed (TODO)
 - **Source**: v2 hero; identical copy on deck slide 1.
@@ -87,7 +87,7 @@ Note: the footer IS the contact section. There is no contact form anywhere in th
 - **Layout**: 2-col grid `0.7fr / 1.3fr` — eyebrow left, content right; background image `uploads/370ffc18c53a96c069adb785f83556b9-b5cd2277.png` (pump-jack + tech-icon overlay) at 8% opacity as texture
 - **Eyebrow**: `OUR STORY`
 - **Headline (h2)**: "Built by industry experts, from day one global"
-- **Body ¶1**: "Rondason Group was founded by industry experts with decades of combined experience working within energy and metals across multiple continents. Rather than build around a single region, the company was structured from the outset with a global mandate — able to source, trade and deliver wherever the market demands."
+- **Body ¶1**: "Rondason Group was founded by industry experts with decades of combined experience working within energy and metals across multiple continents. Rather than build around a single region, the company was structured from the outset to introduce global sellers and buyers to deliver wherever the market demands." *(second sentence revised by the client, 2026-08-20 — was "…structured from the outset with a global mandate — able to source, trade and deliver wherever the market demands.")*
 - **Body ¶2**: "Commodity markets are being reshaped by the energy transition, new trade corridors and shifting supply chains. Rondason is built to move with that change — expanding deliberately into new markets, products and services as the opportunity arises, with an eye firmly on where global trade is heading next."
   - *(Deck slide 3 has shorter versions of both paragraphs; v2 is canonical.)*
 - **Source**: v2 about section; deck slide 3.
@@ -96,7 +96,7 @@ Note: the footer IS the contact section. There is no contact form anywhere in th
 
 - **Layout**: 3 centred columns, each with a rotated-square (diamond) outline icon containing a small glyph (dot / bar / triangle)
 - **Pillar 1 — Trust**: "Durable relationships and disciplined risk management, applied consistently to every counterparty."
-- **Pillar 2 — Expertise**: "Decades of combined trading experience across energy, metals and mining markets worldwide."
+- **Pillar 2 — Expertise**: "Decades of combined experience across energy, metals and mining markets." *(client reword, 2026-08-20 — dropped "trading" and "worldwide")*
 - **Pillar 3 — Foresight**: "Built for where global markets are heading, not just where they've been."
 - **Source**: v2 pillars section; deck slide 4 (identical).
 
@@ -104,11 +104,11 @@ Note: the footer IS the contact section. There is no contact form anywhere in th
 
 - **Layout**: navy section, background collage `uploads/industries-future-photo-collage-modern-sustainable-energy-construction-mining-349228743.webp` at 35% opacity (**visibly Dreamstime-watermarked — must be licensed or replaced, TODO**); 3 bordered cards
 - **Eyebrow**: `MARKETS`
-- **Headline (h2)**: "Three trading verticals, one global reach" *(v2 says "Two" — updated when the client added the third vertical)*
-- **Card 1 — Energy**: "Crude, refined products, gas and coal — physical trading across the world's ports and terminals."
-- **Card 2 — Metals & Mining**: "Base metals and mined commodities, sourced and delivered across global supply chains."
+- **Headline (h2)**: "Three verticals, one global reach" *(v2 says "Two trading verticals" — third vertical added, then "trading" removed at the client's request, 2026-08-20)*
+- **Card 1 — Energy**: "Crude, refined products, gas and coal." *(client cut everything from the em dash onwards, 2026-08-20)*
+- **Card 2 — Metals & Mining**: "Base metals and mined commodities." *(client cut the trailing clause, 2026-08-20)*
   - *(v1 and MP say "sourced, financed and delivered" — v2 drops "financed". v2 canonical; variant worth confirming with client since the finance credential is a selling point.)*
-- **Card 3 — Agriculture**: "Grains, oilseeds and soft commodities moved from origin to destination markets worldwide."
+- **Card 3 — Agriculture**: "Grains, oilseeds and soft commodities." *(client cut the trailing clause, 2026-08-20)*
   - *(Not in v2. Supplied by the client directly on 2026-08-12 as a design screenshot of the card — copy transcribed verbatim from that image.)*
 - **Source**: v2 markets section; deck slide 5. Agriculture card: client screenshot, 2026-08-12.
 
@@ -126,7 +126,7 @@ Candidates for enriching the build — each needs client approval before use on 
   - **03 Logistics** — "Freight, storage and delivery coordinated door to door."
   - **04 Finance** — "Settlement and trade finance structured around counterparty needs."
 - **Pull quote** (MP page 3): "A single standard of trust, applied to every counterparty, every trade."
-- **Trade-finance credential** (v1 About + MP page 2, absent from v2): "Backed by structured trade finance and long-standing banking and shipping relationships across the world's major ports."
+- **Trade-finance credential** (v1 About + MP page 2, absent from v2): "Backed by structured trade finance and long-standing banking and shipping relationships across the world's major ports." — **removed from the site by the client, 2026-08-20. Do not reinstate.**
 - **Alternate hero sub** (v1): "Rondason is a global trading house moving energy and metals across the world's markets — built on trust, expertise and an international outlook."
 - **Alternate About body** (v1/MP): "Founded by industry experts, Rondason trades physical energy and metals across the world's ports and terminals — pairing established relationships with disciplined risk management, so counterparties can trade with confidence at every stage of the supply chain."
 - **Alternate headlines**: "Built on trust and expertise" (v1/MP About), "Two trading desks" (v1 Markets), "Global reach, end to end" (MP process)
