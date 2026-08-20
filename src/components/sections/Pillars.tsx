@@ -11,7 +11,7 @@ const PILLARS = [
     title: 'Expertise',
     glyph: 'bar',
     description:
-      'Decades of combined trading experience across energy, metals and mining markets worldwide.',
+      'Decades of combined experience across energy, metals and mining markets.',
   },
   {
     title: 'Foresight',

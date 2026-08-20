@@ -49,8 +49,10 @@ export function MarketTicker() {
   }, []);
 
   return (
-    <div className="border-b border-navy-line/40 bg-navy-deep">
-      <div ref={container} className="tradingview-widget-container" />
+    /* Docked at the bottom of the hero (fold line). min-h reserves the
+       widget's height up front so the async embed can't shift the layout. */
+    <div className="relative border-t border-navy-line/40 bg-navy-deep/85">
+      <div ref={container} className="tradingview-widget-container min-h-[72px]" />
       {/* Attribution is mandatory under TradingView's widget terms. */}
       <div className="tradingview-widget-copyright pb-1 text-center">
         <a

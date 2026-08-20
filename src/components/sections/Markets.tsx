@@ -5,8 +5,7 @@ import { ScrollReveal } from '@/components/ui/ScrollReveal';
 const MARKETS = [
   {
     title: 'Energy',
-    description:
-      "Crude, refined products, gas and coal — physical trading across the world's ports and terminals.",
+    description: 'Crude, refined products, gas and coal.',
   },
   {
     title: 'Metals & Mining',
@@ -15,8 +14,7 @@ const MARKETS = [
   },
   {
     title: 'Agriculture',
-    description:
-      'Grains, oilseeds and soft commodities moved from origin to destination markets worldwide.',
+    description: 'Grains, oilseeds and soft commodities.',
   },
 ] as const;
 
@@ -39,7 +37,7 @@ export function Markets() {
             Markets
           </Eyebrow>
           <h2 className="mb-12 max-w-[640px] text-[clamp(30px,4vw,44px)] leading-[1.15] text-on-navy lg:mb-16">
-            Three trading verticals, one global reach
+            Three verticals, one global reach
           </h2>
         </ScrollReveal>
         <div className="grid gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
@@ -56,13 +54,6 @@ export function Markets() {
             </ScrollReveal>
           ))}
         </div>
-        {/* Credential line from v1/marketing pack — pending client approval (TODO) */}
-        <ScrollReveal delay={200} className="mt-14 lg:mt-16">
-          <p className="mx-auto max-w-[560px] text-center text-[14px] leading-[1.8] text-on-navy-muted">
-            Backed by structured trade finance and long-standing banking and
-            shipping relationships across the world&apos;s major ports.
-          </p>
-        </ScrollReveal>
       </div>
     </section>
   );

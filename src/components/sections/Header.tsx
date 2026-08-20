@@ -4,8 +4,8 @@ import { MobileMenu } from './MobileMenu';
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-navy-line/40 bg-navy">
-      <div className="relative flex items-center justify-between px-6 py-4 md:px-10 lg:px-16 lg:py-5">
+    <header className="sticky top-0 z-50 h-[var(--header-h)] border-b border-navy-line/40 bg-navy">
+      <div className="relative flex h-full items-center justify-between px-6 md:px-10 lg:px-16">
         <a href="#home" className="flex items-center gap-3">
           <LogoMark size={30} className="text-gold-bright" />
           <span className="font-display text-[17px] tracking-[1px] text-on-navy">

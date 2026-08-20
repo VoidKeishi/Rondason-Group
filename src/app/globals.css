@@ -37,6 +37,19 @@
   --duration-fast: 200ms;
   --duration-base: 400ms;
   --duration-smooth: 700ms;
+
+  /* --- Above-the-fold chrome ---
+     Fixed heights for the two bars above the hero, so the hero can size
+     itself to exactly fill the first viewport (100svh − these). The market
+     ticker is docked inside the hero and needs no entry here. */
+  --utility-bar-h: 36px;
+  --header-h: 72px;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --header-h: 84px;
+  }
 }
 
 /* ============================================

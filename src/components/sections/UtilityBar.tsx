@@ -2,7 +2,7 @@ import { PHONE_NUMBERS } from '@/components/phone-numbers';
 
 export function UtilityBar() {
   return (
-    <div className="flex justify-end gap-5 bg-navy-deep px-6 py-2 text-[11.5px] tracking-[0.3px] text-on-navy-body md:px-10 lg:gap-6 lg:px-16">
+    <div className="flex h-[var(--utility-bar-h)] items-center justify-end gap-5 bg-navy-deep px-6 text-[11.5px] tracking-[0.3px] text-on-navy-body md:px-10 lg:gap-6 lg:px-16">
       <span>
         Email:{' '}
         <a href="mailto:info@rondason.com" className="hover:text-on-navy">

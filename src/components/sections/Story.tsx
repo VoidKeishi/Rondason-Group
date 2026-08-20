@@ -25,8 +25,8 @@ export function Story() {
             Rondason Group was founded by industry experts with decades of
             combined experience working within energy and metals across
             multiple continents. Rather than build around a single region, the
-            company was structured from the outset with a global mandate —
-            able to source, trade and deliver wherever the market demands.
+            company was structured from the outset to introduce global sellers
+            and buyers to deliver wherever the market demands.
           </p>
           <p className="max-w-[640px] text-[16px] leading-[1.8] text-body">
             Commodity markets are being reshaped by the energy transition, new
