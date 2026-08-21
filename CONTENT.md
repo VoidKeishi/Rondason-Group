@@ -77,9 +77,9 @@ Note: the footer IS the contact section. There is no contact form anywhere in th
 - **Layout**: single centred prose block
 - **Eyebrow**: `OUR PROCESS`
 - **Headline (h2)**: "A disciplined process, built for scale"
-- **Body**: "As a global commodity trading company, we source energy and metals from producers worldwide and deliver them to buyers across every major market. Our process spans global market analysis, procurement, logistics and risk management — combining data-driven forecasting with on-the-ground relationships to navigate volatile markets and deliver dependable outcomes as trade networks continue to evolve."
-  - *(Deck slide 2 has the same paragraph ending at "…volatile markets." — v2 adds the final clause; v2 is canonical.)*
-- **Source**: v2 process section; deck slide 2.
+- **Body**: "As a global commercial intermediary in energy and metals, we connect producers and buyers across every major market. Our process spans global market analysis, counterparty due diligence, logistics coordination and risk management — combining data-driven insight with on-the-ground relationships to structure reliable trade flows between sellers and buyers as markets continue to evolve."
+  - *(Client-supplied revision, 2026-08-21 — replaces the v2 paragraph "As a global commodity trading company, we source energy and metals from producers worldwide and deliver them to buyers across every major market. Our process spans global market analysis, procurement, logistics and risk management — combining data-driven forecasting with on-the-ground relationships to navigate volatile markets and deliver dependable outcomes as trade networks continue to evolve." Note the repositioning: "commercial intermediary" / "connect", not "trading company" / "source and deliver" — and still energy + metals only, no agriculture; see TODO.)*
+- **Source**: client feedback, 2026-08-21 (previously v2 process section; deck slide 2).
 - **Design opportunity**: the harvested 4-step process (see below) could upgrade this prose-only section — client approval needed.
 
 ### Section 3: Our Story (`#about`, cream bg, 8%-opacity texture image)

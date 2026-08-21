@@ -38,14 +38,15 @@ export function Process() {
           <h2 className="mb-6 text-[clamp(30px,4vw,44px)] leading-[1.15]">
             A disciplined process, built for scale
           </h2>
+          {/* Client-supplied revision, 2026-08-21 — verbatim */}
           <p className="text-[16px] leading-[1.8] text-body-soft">
-            As a global commodity trading company, we source energy and metals
-            from producers worldwide and deliver them to buyers across every
-            major market. Our process spans global market analysis,
-            procurement, logistics and risk management — combining data-driven
-            forecasting with on-the-ground relationships to navigate volatile
-            markets and deliver dependable outcomes as trade networks continue
-            to evolve.
+            As a global commercial intermediary in energy and metals, we
+            connect producers and buyers across every major market. Our
+            process spans global market analysis, counterparty due diligence,
+            logistics coordination and risk management — combining data-driven
+            insight with on-the-ground relationships to structure reliable
+            trade flows between sellers and buyers as markets continue to
+            evolve.
           </p>
         </ScrollReveal>
         <ol className="grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">

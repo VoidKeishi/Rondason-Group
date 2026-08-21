@@ -170,11 +170,44 @@
     animation: globe-fade 700ms ease-out forwards;
   }
 
-  /* Expanding halo around port points */
-  .port-pulse {
-    transform-box: fill-box;
-    transform-origin: center;
-    animation: port-pulse 5s ease-in-out infinite;
+  /* Region names breathe between full and dimmed presence, staggered via
+     negative delays so one is always rising while another recedes. */
+  .globe-label {
+    animation: label-breathe 18s ease-in-out infinite;
+  }
+
+  /* Connection arcs perpetually draw themselves (pathLength=1 dasharray),
+     hold, then dissolve — staggered by a third of the cycle per route so a
+     line is always quietly in motion. `backwards` holds the hidden 0%
+     state through each route's initial delay; the 100%→0% loop seam is
+     invisible because the line is at zero opacity while the dash offset
+     resets. */
+  .globe-route {
+    stroke-dasharray: 1;
+    animation: route-cycle 15s var(--ease-flow) infinite backwards;
+  }
+}
+
+@keyframes route-cycle {
+  0% {
+    stroke-dashoffset: 1;
+    opacity: 1;
+  }
+  30% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  72% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  88% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 1;
+    opacity: 0;
   }
 }
 
@@ -197,14 +230,12 @@
   }
 }
 
-@keyframes port-pulse {
+@keyframes label-breathe {
   0%,
   100% {
-    transform: scale(1);
-    opacity: 0.5;
+    opacity: 0.9;
   }
   50% {
-    transform: scale(1.9);
-    opacity: 0;
+    opacity: 0.4;
   }
 }
